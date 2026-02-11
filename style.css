@@ -1,0 +1,232 @@
+/* font */
+@font-face {
+  font-family: 'Manrope';
+  src: url('Manrope-Variable.ttf') format('truetype');
+}
+
+/* colors */
+:root {
+  --bg: rgb(247 247 247);
+  --text: #111827;
+  --muted: #6b7280;
+  --border-subtle: #e5e7eb;
+  --accent: #000000;
+  --accent2: #ffffff;
+  --hover: black
+}
+
+/* global box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* global styles */
+body {
+  margin: 0;
+  min-height: auto;
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+  
+  background-attachment: fixed;
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* container properties */
+.container {
+  width: min(720px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+/* main content spacing */
+main {
+  padding-bottom: 17rem;
+  padding-top: 6rem;
+}
+
+/*top bar properties */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  z-index: 1000;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(229, 231, 235, 0);
+}
+
+/* top bar content properties */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* main h1 properties */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  color: var(--text);
+}
+
+/* photo gallery */
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* animation for scroll */
+.box {
+  animation: fadeUp linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+.box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* footers */
+.contact-footer {
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  margin-top: auto;
+}
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+.footer-links a:hover {
+  opacity: 0.3;
+}
+
+/* credit bottom page */
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1px;
+}
+
+/* text deasupra la titlu */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  color: #000000;
+  margin: 0 0 2rem;
+  font-weight: 500;
+}
+
+/* space between sections */
+.space {
+  height: 400px;
+}
+
+/* center something */
+.center {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* nav bar ing. Robert */
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+/* nav bar about projects contact */
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+/* nav bar text edit */
+.header-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  transition: opacity 0.3s ease;
+}
+/* nav bar text edit hover */
+.header-nav a:hover {
+  opacity: 0.6;
+}
+
+/* project section for h2 title */
+.section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+}
+/* scroll down p text */
+.section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1rem;
+}
+
+/* section spacing */
+.section {
+  padding: 2.25rem 0;
+}
+
+/* main page description me */
+.subtitle {
+  margin: 2rem 0 5rem;
+  color: #000000;
+  line-height: 1.7;
+  max-width: 500px;
+  font-size: 1rem;
+}
+
+/* accent text for title */
+.accent-text {
+  color: #ffd209;
+}
