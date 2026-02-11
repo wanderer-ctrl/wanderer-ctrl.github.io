@@ -1,4 +1,3 @@
-git init
 git add .
 git commit -am "any text"
 git push origin master
