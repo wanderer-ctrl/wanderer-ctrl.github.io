@@ -182,15 +182,19 @@ h1 {
 .contact-footer {
   padding: 4rem 2rem;
   margin-bottom: 3rem;
-  margin-top: auto;
 }
 .footer-content {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .footer-links {
   list-style: none;
