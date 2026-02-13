@@ -87,12 +87,14 @@ h1 {
 }
 
 /* animation for scroll */
+@supports (animation-timeline:view()){
 .box {
   animation: fadeUp linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
   overflow: hidden;
   border-radius: 0.75rem;
+}
 }
 .box img {
   width: 100%;
