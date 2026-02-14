@@ -44,28 +44,28 @@
             </div>
 
             <div class="box">
-              <a href="photo1-details.html">
+              <a href="photo2-details.html">
                 <img src="photos/photo2.jpg" alt="Project photo 2" />
                 <div class="box-overlay">Learn more</div>
               </a>
             </div>
 
             <div class="box">
-              <a href="photo1-details.html">
+              <a href="photo3-details.html">
                 <img src="photos/photo3.jpg" alt="Project photo 3" />
                 <div class="box-overlay">Learn more</div>
               </a>
             </div>
 
             <div class="box">
-              <a href="photo1-details.html">
+              <a href="photo4-details.html">
                 <img src="photos/photo4.jpg" alt="Project photo 4" />
                 <div class="box-overlay">Learn more</div>
               </a>
             </div>
 
             <div class="box">
-              <a href="photo1-details.html">
+              <a href="photo5-details.html">
                 <img src="photos/photo5.jpg" alt="Project photo 5" />
                 <div class="box-overlay">Learn more</div>
               </a>
@@ -80,34 +80,5 @@
     <footer class="site-footer">
       <p>&copy; Robert D.</p>
     </footer>
-
-    <script>
-      // Check if the browser supports the native CSS animation
-      if (!CSS.supports("animation-timeline: view()")) {
-        
-        // Select all elements with the class 'box'
-        const boxes = document.querySelectorAll('.box');
-    
-        // Create an observer that watches for when elements enter the screen
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            // If the element is visible on screen...
-            if (entry.isIntersecting) {
-              // Add the class that triggers the CSS transition
-              entry.target.classList.add('in-view');
-              
-              // Optional: Stop watching this element after it appears once
-              observer.unobserve(entry.target); 
-            }
-          });
-        }, {
-          threshold: 0.2 // Trigger when 20% of the image is visible
-        });
-    
-        // Start watching each box
-        boxes.forEach(box => observer.observe(box));
-      }
-    </script>
-
   </body>
 </html>

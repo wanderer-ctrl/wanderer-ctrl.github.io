@@ -1,3 +1,4 @@
-git add .
-git commit -am "any text"
-git push origin master
+git add 
+git status
+git commit -m "any text"
+git push
